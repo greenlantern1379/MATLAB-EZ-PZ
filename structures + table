@@ -1,0 +1,46 @@
+reservoir(1)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(2)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(3)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(4)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(5)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(6)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(7)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(8)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(9)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(10)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(11)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(12)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+reservoir(13)=struct('Height',randi([7600 9800]),'Length',randi([1000,3007]),'Width',randi([86 8585]),...
+    'Porosity',randi([2,9])*eps,'Perm',randi([1,10])*eps,'IFT',randi([9 90]));
+
+figure(1)
+bar(reservoir(1).Height,reservoir(2).Height,'cyan','grouped')
+grid on
+reservoir.Height
+
+
+restot=struct2table(reservoir);
+figure(2)
+plot(restot.Height,restot.Width,'m<','LineWidth',8)
+xlabel('Height')
+ylabel('Porosity')
+legend('height vs. por')
+grid on
+title('Just a test')
+
+resheight=[reservoir.Height]
+sum(resheight)
+
+find(reservoir(1).Height)
